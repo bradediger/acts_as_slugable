@@ -81,7 +81,7 @@ module Multiup
           #    d. Check if the slug is unique and, if not, append a number until it is
           #    e. Save the URL slug      
           def create_slug
-            return if self.errors.length > 0
+            return if self.errors.count > 0
             
             if self[source_column].nil? or self[source_column].empty?
               return
